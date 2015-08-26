@@ -1,7 +1,9 @@
-alias .. = "cd .."
-alias cd.. = "cd .."
-alias ... = "cd ../.."
-alias .... = "cd ../../.."
-alias ..... = "cd ../../../.."
+alias git=hub
 
-alias duh = "du -h"
+alias ..="cd .."
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias duh="du -h"
