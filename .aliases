@@ -1,9 +1,25 @@
-alias git=hub
-
+#cd aliases
 alias ..="cd .."
 alias cd..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+#Colored output
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+#Set vim as default
+alias vi=vim
+
+#APT aliases
+alias upgrade="sudo apt update && sudo apt full-upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get autoclean"
+
+#Misc
 alias duh="du -h"
+alias df='df -H'
+alias du='du -ch'
+alias meminfo='free -m -l -t'
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
