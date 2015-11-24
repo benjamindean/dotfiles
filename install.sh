@@ -12,6 +12,7 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sudo apt-get install -y zsh
     sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     echo "\nsource ~/.aliases\nsource ~/.functions" >> ZSHRC
+    echo 'if [ -z "$SSH_AUTH_SOCK" ] ; then\n    eval `ssh-agent -s`\n    ssh-add\nfi' >> ZSHRC
 
     if [ git --version 2>/dev/null -eq 0 ]; then
         sudo add-apt-repository ppa:git-core/ppa -y
