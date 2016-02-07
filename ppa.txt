@@ -1,0 +1,12 @@
+ppa:webupd8team/java
+ppa:deity/sid
+ppa:otto-kesselgulasch/gimp-edge
+ppa:phablet-team/tools
+ppa:graphics-drivers/ppa
+ppa:webupd8team/sublime-text-3
+ppa:no1wantdthisname/openjdk-fontfix
+ppa:deluge-team/ppa
+ppa:webupd8team/atom
+ppa:git-core/ppa
+ppa:gezakovacs/ppa
+ppa:paolorotolo/android-studio

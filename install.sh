@@ -45,4 +45,7 @@ ln -sfv "$DOTFILES_DIR/.aliases" ~
 ln -sfv "$DOTFILES_DIR/.functions" ~
 ln -sfv "$DOTFILES_DIR/.editorconfig" ~
 
+xargs apt-add-repository < ppa.txt
+xargs sudo apt install -y < packages.txt
+
 echo "All done!"
