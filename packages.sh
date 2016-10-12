@@ -7,7 +7,7 @@ function install_package() {
 	fi
 }
 
-xargs sudo apt-add-repository < ppa
-xargs sudo apt install -y < packages
+xargs sudo apt-add-repository < ./lists/ppa
+xargs sudo apt install -y < ./lists/packages
 
 install_package skypeforlinux "https://go.skype.com/skypeforlinux-64-alpha.deb"
