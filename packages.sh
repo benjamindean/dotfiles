@@ -3,7 +3,7 @@
 source ./init
 
 for i in $( cat ./lists/ppa ); do
-    sudo apt-add-repository -y $i
+    add_ppa $i
 done
 
 xargs sudo apt install -y < ./lists/packages
