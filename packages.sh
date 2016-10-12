@@ -1,4 +1,4 @@
-export DEB_FOLDER="$HOME/Downloads/DEB"
+#!/usr/bin/env bash
 
 function install_package() {
 	if ! type $1 &>/dev/null; then
@@ -7,7 +7,7 @@ function install_package() {
 	fi
 }
 
-xargs apt-add-repository < ppa.txt
-xargs sudo apt install -y < packages.txt
+xargs sudo apt-add-repository < ppa
+xargs sudo apt install -y < packages
 
 install_package skypeforlinux "https://go.skype.com/skypeforlinux-64-alpha.deb"
