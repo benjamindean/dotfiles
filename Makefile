@@ -1,10 +1,7 @@
-all: init, packages, shell
+all: packages, shell
 
-init:
-	./init.sh
-
-packages: init
+packages:
 	./packages.sh
 
-shell: init
+shell:
 	./shell.sh

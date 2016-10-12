@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-xargs sudo apt-add-repository -y < ./lists/ppa
+source ./init
+
+for i in $( cat ./lists/ppa ); do
+    sudo apt-add-repository -y $i
+done
+
 xargs sudo apt install -y < ./lists/packages
 
 # Install Chrome
@@ -8,9 +13,6 @@ install_package google-chrome-stable "https://dl.google.com/linux/direct/google-
 
 # Install Skype
 install_package skypeforlinux "https://go.skype.com/skypeforlinux-64-alpha.deb"
-
-# Install Telegram
-install_package telegram "https://telegram.org/dl/desktop/linux"
 
 # Install Slack
 install_package slack "https://downloads.slack-edge.com/linux_releases/slack-desktop-2.2.1-amd64.deb"

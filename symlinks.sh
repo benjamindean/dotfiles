@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ./init
+
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/files/.npmrc" ~
 ln -sfv "$DOTFILES_DIR/files/.aliases" ~
