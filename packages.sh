@@ -8,6 +8,8 @@ for i in $( cat ./lists/ppa ); do
     add_ppa $i
 done
 
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+echo steam steam/question select "I AGREE" | sudo debconf-set-selections
 sudo sed -i "/^# deb .*partner/ s/^# //" /etc/apt/sources.list
 sudo apt update
 xargs sudo apt install -y < ./lists/packages

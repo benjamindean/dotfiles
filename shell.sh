@@ -14,6 +14,5 @@ export GOPATH=$HOME/.gocode
 export GEM_HOME=$HOME/.gem
 export PATH=$GOPATH/bin:$HOME/.npm/bin:$HOME/.config/composer/vendor/bin:$GEM_HOME/bin:$PATH
 ' >> $ZSHRC
-    chsh -s /bin/zsh
     flash "success" "\nShell configured\n"
 fi

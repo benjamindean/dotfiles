@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 source ./init.sh
+export GEM_HOME=$HOME/.gem
 
 flash "warning" "===\nInstalling Ruby Gems\n==="
 
