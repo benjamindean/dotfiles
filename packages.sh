@@ -8,6 +8,7 @@ for i in $( cat ./lists/ppa ); do
     add_ppa $i
 done
 
+sudo sed -i "/^# deb .*partner/ s/^# //" /etc/apt/sources.list
 sudo apt update
 xargs sudo apt install -y < ./lists/packages
 
