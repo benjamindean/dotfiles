@@ -1,4 +1,4 @@
-all: packages shell npm gem
+all: symlinks packages shell npm gem
 
 packages:
 	./packages.sh
@@ -11,3 +11,6 @@ npm:
 
 gem:
 	./gem.sh
+
+symlinks:
+	./symlinks.sh
