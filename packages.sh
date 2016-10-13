@@ -10,6 +10,7 @@ done
 
 # Auto-accepting licenses
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+echo steam steam/license select true | sudo debconf-set-selections
 echo steam steam/question select "I AGREE" | sudo debconf-set-selections
 
 # Enabling partners repository
