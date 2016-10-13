@@ -1,9 +1,7 @@
 ubuntu-restricted-extras
-zsh
 ubuntu-make
 gnome-color-manager
 vlc
-spotify-client
 mysql-workbench
 vim
 imagemagick
@@ -25,3 +23,6 @@ tmux
 htop
 virtualbox
 vagrant
+curl
+wget
+php

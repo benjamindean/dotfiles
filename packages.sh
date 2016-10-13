@@ -52,6 +52,6 @@ install_package composer "" install_composer
 
 
 # Install missing deps
-sudo apt install -f
+sudo apt install -f -y
 
 flash "success" "\nAll packages installed\n"

@@ -4,7 +4,7 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export ZSHRC="$HOME/.zshrc"
 
 export DEB_FOLDER="$HOME/Downloads/DEB"
-mkdir -p DEB_FOLDER
+mkdir -p $DEB_FOLDER
 
 # Colors
 export COLOR_RED='\033[1;31m'
@@ -15,7 +15,7 @@ export NO_COLOR='\033[0m'
 function install_package() {
 	if ! type $1 &>/dev/null; then
 	    flash "warning" "Installing $1..."
-	    if [ $2 = "" ]; then
+	    if [ "$2" = "" ]; then
 	        $3
 	    else
             wget $2 -O $DEB_FOLDER/$1.deb
