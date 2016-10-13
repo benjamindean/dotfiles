@@ -8,9 +8,14 @@ for i in $( cat ./lists/ppa ); do
     add_ppa $i
 done
 
+# Auto-accepting licenses
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 echo steam steam/question select "I AGREE" | sudo debconf-set-selections
+
+# Enabling partners repository
 sudo sed -i "/^# deb .*partner/ s/^# //" /etc/apt/sources.list
+
+# Installing packages
 sudo apt update
 xargs sudo apt install -y < ./lists/packages
 
@@ -51,7 +56,6 @@ function install_composer() {
 }
 
 install_package composer "" install_composer
-
 
 # Install missing deps
 sudo apt install -f -y
