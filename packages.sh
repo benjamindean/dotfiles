@@ -6,9 +6,9 @@ flash "warning" "===\nInstalling packages\n==="
 
 for i in $( cat ./lists/ppa ); do
     add_ppa $i
-    sudo apt update
 done
 
+sudo apt update
 xargs sudo apt install -y < ./lists/packages
 
 # Install Chrome
