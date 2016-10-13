@@ -14,8 +14,16 @@ export NO_COLOR='\033[0m'
 
 function install_package() {
 	if ! type $1 &>/dev/null; then
-		wget $2 -O $DEB_FOLDER/$1.deb
-		sudo dpkg -i $DEB_FOLDER/$1.deb
+	    flash "warning" "Installing $1..."
+	    if [ $2 = "" ]; then
+	        $3
+	    else
+            wget $2 -O $DEB_FOLDER/$1.deb
+            sudo dpkg -i $DEB_FOLDER/$1.deb
+        fi
+		flash "success" "Installed: $1"
+	else
+	    flash "success" "$1 is already installed"
 	fi
 }
 
