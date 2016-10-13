@@ -2,7 +2,9 @@
 
 export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export ZSHRC="$HOME/.zshrc"
+
 export DEB_FOLDER="$HOME/Downloads/DEB"
+mkdir -p DEB_FOLDER
 
 # Colors
 export COLOR_RED='\033[1;31m'
