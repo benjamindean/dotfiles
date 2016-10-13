@@ -3,6 +3,7 @@
 source ./init.sh
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    flash "warning" "===\nConfiguring shell\n==="
     sudo apt-get install -y zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     echo "
@@ -14,4 +15,5 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     export PATH=$GOPATH/bin:$HOME/.npm/bin:$HOME/.config/composer/vendor/bin:$GEM_HOME/bin:$PATH
     " >> ZSHRC
     chsh -s /bin/zsh
+    flash "success" "\nShell configured\n"
 fi

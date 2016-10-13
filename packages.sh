@@ -2,6 +2,8 @@
 
 source ./init.sh
 
+flash "warning" "===\nInstalling packages\n==="
+
 for i in $( cat ./lists/ppa ); do
     add_ppa $i
 done
@@ -42,3 +44,5 @@ fi
 
 # Install missing deps
 sudo apt install -f
+
+flash "success" "\nAll packages installed\n"

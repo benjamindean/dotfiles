@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
-# Installing npm global modules
+source ./init.sh
+
+flash "warning" "===\nInstalling npm modules\n==="
+
 if ! type node &>/dev/null; then
-    echo "Node is not installed yet"
+    flash "fail" "Node is not installed yet"
 elif ! cat $HOME/.npmrc &>/dev/null; then
-    echo "No .npmrc file"
+    flash "fail" "No .npmrc file"
 else
 	xargs npm install -g < ./lists/npm
+	flash "success" "\nAll npm modules installed\n"
 fi
