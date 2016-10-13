@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./init
+source ./init.sh
 
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/files/.npmrc" ~

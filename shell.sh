@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./init
+source ./init.sh
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sudo apt-get install -y zsh

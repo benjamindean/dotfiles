@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./init
+source ./init.sh
 
 for i in $( cat ./lists/ppa ); do
     add_ppa $i

@@ -1,7 +1,13 @@
-all: packages, shell
+all: packages shell npm gem
 
 packages:
 	./packages.sh
 
 shell:
 	./shell.sh
+
+npm:
+	./npm.sh
+
+gem:
+	./gem.sh
