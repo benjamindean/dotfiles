@@ -3,5 +3,5 @@ babel
 webpack
 bower
 slush
-electron-prebuilt
+electron
 request-promise
