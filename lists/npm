@@ -1,4 +1,5 @@
 gulp
+yarn
 babel
 webpack
 bower
