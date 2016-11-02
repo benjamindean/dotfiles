@@ -18,7 +18,7 @@ sudo sed -i "/^# deb .*partner/ s/^# //" /etc/apt/sources.list
 
 # Installing packages
 sudo apt update
-xargs sudo apt install -y < ./lists/packages
+xargs sudo apt install -y < ./lists/apt
 
 # Install Chrome
 install_package google-chrome-stable "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
